@@ -1,0 +1,15 @@
+{
+    "roles": {
+        "admin": {
+            "grants": [
+                "view",
+                "edit",
+            ]
+        },
+        "viewer": {
+            "grants": [
+                "view",
+            ]
+        }
+    }
+}

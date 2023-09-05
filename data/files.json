@@ -1,0 +1,28 @@
+{
+    "files": [
+        {
+            "id": "backend-readme.md",
+            "team_id": "rnd"
+        },
+        {
+            "id": "frontend-readme.md",
+            "team_id": "rnd"
+        },
+        {
+            "id": "gateway-config.yaml",
+            "team_id": "rnd"
+        },
+        {
+            "id": "website.js",
+            "team_id": "marketing"
+        },
+        {
+            "id": "blog-1.pdf",
+            "team_id": "marketing"
+        },
+        {
+            "id": "logo.psd",
+            "team_id": "marketing"
+        }
+    ]
+}

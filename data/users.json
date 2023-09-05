@@ -1,0 +1,30 @@
+{
+    "users": [
+        {
+            "id": "sally",
+            "assignments": [
+                {
+                    "role": "viewer",
+                    "resource": "organization:acme"
+                },
+                {
+                    "role": "admin",
+                    "resource": "team:rnd"
+                }
+            ]
+        },
+        {
+            "id": "tim",
+            "assignments": [
+                {
+                    "role": "viewer",
+                    "resource": "team:marketing"
+                },
+                {
+                    "role": "admin",
+                    "resource": "file:design.psd"
+                }
+            ]
+        }
+    ]
+}

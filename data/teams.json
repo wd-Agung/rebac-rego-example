@@ -1,0 +1,10 @@
+{
+    "teams": [
+        {
+            "id": "rnd""parent_id": "organization:acme"
+        },
+        {
+            "id": "marketing""parent_id": "organization:acme"
+        }
+    ]
+}
