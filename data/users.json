@@ -1,30 +1,30 @@
 {
     "users": [
         {
-            "id": "sally",
             "assignments": [
                 {
-                    "role": "viewer",
-                    "resource": "organization:acme"
+                    "resource": "organization:acme",
+                    "role": "viewer"
                 },
                 {
-                    "role": "admin",
-                    "resource": "team:rnd"
+                    "resource": "team:rnd",
+                    "role": "admin"
                 }
-            ]
+            ],
+            "id": "sally"
         },
         {
-            "id": "tim",
             "assignments": [
                 {
-                    "role": "viewer",
-                    "resource": "team:marketing"
+                    "resource": "team:marketing",
+                    "role": "viewer"
                 },
                 {
-                    "role": "admin",
-                    "resource": "file:design.psd"
+                    "resource": "file:design.psd",
+                    "role": "admin"
                 }
-            ]
+            ],
+            "id": "tim"
         }
     ]
 }
