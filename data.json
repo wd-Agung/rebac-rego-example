@@ -39,7 +39,7 @@
   },
   "viewer": {
       "grants": [
-          "view",
+          "view"
       ]
   }
 },
