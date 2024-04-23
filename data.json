@@ -34,7 +34,7 @@
   "admin": {
       "grants": [
           "view",
-          "edit",
+          "edit"
       ]
   },
   "viewer": {
