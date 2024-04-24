@@ -4,20 +4,20 @@ import future.keywords.in
 
 # rule to return the resource instances by ids
 files[id] := file_instance {
-	# iterate the resource instances of some file_instance in data.files
-	some file_instance in data.files
+	# iterate the resource instances of some file_instance in data.data.files
+	some file_instance in data.data.files
 	id := sprintf("file:%s",[file_instance.id])
 }
 
 # rule to return teams by ids
 teams[id] := team_instance {
 	# Iterate the teams 
-	some team_instance in data.teams
+	some team_instance in data.data.teams
 	id := sprintf("team:%s",[team_instance.id])
 }
 
 organizations[id] := organization_instance {
-	some organization_instance in data.organizations
+	some organization_instance in data.data.organizations
     id := sprintf("organization:%s",[organization_instance.id])
 }
 
@@ -31,7 +31,7 @@ full_graph[subject] := ref_object {
 
 # rule to return users by ids
 users[id] := user {
-	some user in data.users
+	some user in data.data.users
 	id := user.id
 }
 
@@ -44,7 +44,7 @@ allowing_assignments[assignment] {
 	some assignment in input_user.assignments
 
 	# check that the required action from the input is allowed by the current role
-	input.action in data.roles[assignment.role].grants
+	input.action in data.data.roles[assignment.role].grants
 
 	# check that the required resource from the input is reachable in the graph
 	# by the current team 
