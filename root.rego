@@ -28,7 +28,7 @@ full_graph[subject] := ref_object {
 
 	# get the parent_id the subject is referring
 	ref_object := [object.get(object_instance, "parent_id", null)]
-}
+} 
 
 # rule to return users by ids
 users[id] := user {
