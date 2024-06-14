@@ -24,12 +24,12 @@ roles := data.roles
 users := data.users
 
 # return a full graph mapping of each subject to the object it has reference to
-full_graph[subject] := ref_object {
-	some subject, object_instance in object.union_n([data.assets, data.campaign, data.layouts, data.brands, data.agencies])
+# full_graph[subject] := ref_object {
+# 	some subject, object_instance in object.union_n([data.assets, data.campaign, data.layouts, data.brands, data.agencies])
 
-	# get the parent_id the subject is referring
-	ref_object := [object.get(object_instance, "parent_id", null)]
-}
+# 	# get the parent_id the subject is referring
+# 	ref_object := [object.get(object_instance, "parent_id", null)]
+# }
 
 # rule to return users by ids
 # users[id] := user {
@@ -41,22 +41,22 @@ full_graph[subject] := ref_object {
 input_user := data.users[input.user]
 
 # rule to return a list of allowed assignments
-allowing_assignments[assignment] {
-	# iterate the user assignments
-	some assignment in input_user.assignments
+# allowing_assignments[assignment] {
+# 	# iterate the user assignments
+# 	some assignment in input_user.assignments
 
-	# check that the required action from the input is allowed by the current role
-	input.action in data.roles[assignment.role].grants
+# 	# check that the required action from the input is allowed by the current role
+# 	input.action in data.roles[assignment.role].grants
 
-	# check that the required resource from the input is reachable in the graph
-	# by the current team 
-	assignment.resource in graph.reachable(full_graph, {input.resource})
-}
+# 	# check that the required resource from the input is reachable in the graph
+# 	# by the current team 
+# 	assignment.resource in graph.reachable(full_graph, {input.resource})
+# }
 
 # create allow rule with the default of false
 default allow := false
 
-allow {
-	# allow the user to perform the action on the resource if they have more than one allowing assignments
-	count(allowing_assignments) > 0
-}
+# allow {
+# 	# allow the user to perform the action on the resource if they have more than one allowing assignments
+# 	count(allowing_assignments) > 0
+# }
