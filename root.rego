@@ -20,6 +20,8 @@ import future.keywords.in
 # 	some organization_instance in data.organizations
 #     id := sprintf("organization:%s",[organization_instance.id])
 # }
+roles := data.roles
+users := data.users
 
 # return a full graph mapping of each subject to the object it has reference to
 full_graph[subject] := ref_object {
