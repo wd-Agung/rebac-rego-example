@@ -36,7 +36,7 @@ full_graph[subject] := ref_object {
 # }
 
 # the input user
-input_user := users[input.user]
+input_user := data.users[input.user]
 
 # rule to return a list of allowed assignments
 allowing_assignments[assignment] {
