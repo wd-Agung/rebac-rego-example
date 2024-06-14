@@ -23,18 +23,17 @@ import future.keywords.in
 
 # return a full graph mapping of each subject to the object it has reference to
 full_graph[subject] := ref_object {
-	some subject, object_instance in object.union_n([data.assets, data.brands, data.agencies])
-    # some subject, object_instance in object.union_n([data.files, data.teams, data.organizations])
+	some subject, object_instance in object.union_n([data.assets, data.campaign, data.layouts, data.brands, data.agencies])
 
 	# get the parent_id the subject is referring
 	ref_object := [object.get(object_instance, "parent_id", null)]
-} 
+}
 
 # rule to return users by ids
-users[id] := user {
-	some user in data.users
-	id := user.id
-}
+# users[id] := user {
+# 	some user in data.users
+# 	id := user.id
+# }
 
 # the input user
 input_user := users[input.user]
