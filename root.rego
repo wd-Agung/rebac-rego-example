@@ -21,7 +21,7 @@ import future.keywords.in
 #     id := sprintf("organization:%s",[organization_instance.id])
 # }
 
-assets := data.assets
+# assets := data.assets
 campaigns := data.campaigns
 layouts := data.layouts
 brands := data.brands
@@ -29,7 +29,7 @@ agencies := data.agencies
 
 # return a full graph mapping of each subject to the object it has reference to
 full_graph[subject] := ref_object {
-	some subject, object_instance in object.union_n([assets, campaigns, layouts, brands, agencies])
+	some subject, object_instance in object.union_n([campaigns, layouts, brands, agencies])
 
 	# get the parent_id the subject is referring
 	ref_object := [object.get(object_instance, "parent_id", null)]
