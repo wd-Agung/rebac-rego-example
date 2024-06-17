@@ -20,8 +20,8 @@ import future.keywords.in
 # 	some organization_instance in data.organizations
 #     id := sprintf("organization:%s",[organization_instance.id])
 # }
-roles := data.roles
-users := data.users
+roles := data.data.roles
+users := data.data.users
 
 # return a full graph mapping of each subject to the object it has reference to
 # full_graph[subject] := ref_object {
@@ -38,7 +38,7 @@ users := data.users
 # }
 
 # the input user
-input_user := data.users[input.user]
+input_user := data.data.users[input.user]
 
 # rule to return a list of allowed assignments
 # allowing_assignments[assignment] {
