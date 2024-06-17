@@ -56,7 +56,7 @@ allowing_assignments[assignment] {
 
 	# check that the required resource from the input is reachable in the graph
 	# by the current team 
-	assignment.resource in graph.reachabled(data.full_graph, {input.resource})
+	assignment.resource in graph.reachable(data.full_graph, {input.resource})
 }
 
 # create allow rule with the default of false
